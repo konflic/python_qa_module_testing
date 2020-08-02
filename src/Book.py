@@ -1,7 +1,7 @@
 class Book:
 
     def __init__(self, data):
-        if set(data.keys()).difference({'title', 'author', 'year', 'genre'}):
+        if len(set(data.keys()).intersection({'title', 'author', 'year', 'genre'})) != 4:
             raise ValueError("Неправильный формат книги", data.keys())
         self._title = data.get('title')
         self._author = data.get('author')
