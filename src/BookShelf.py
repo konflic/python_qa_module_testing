@@ -21,7 +21,7 @@ class BookShelf:
 
     def take_book(self, title):
         book_index = self.has_book(title)
-        if book_index:
+        if book_index is not None:
             return self._books.pop(book_index)
 
     @property
