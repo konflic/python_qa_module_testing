@@ -22,8 +22,7 @@ class BookShelf:
     def take_book(self, title):
         book_index = self.has_book(title)
         if book_index:
-            book = self._books.pop(book_index)
-            return book
+            return self._books.pop(book_index)
 
     @property
     def book_titles(self):
