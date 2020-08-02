@@ -26,7 +26,7 @@ class Library:
 
     def has_book(self, title):
         for shelf in self._bookshelves:
-            if shelf.has_book(title):
+            if shelf.has_book(title) is not None:
                 return shelf.take_book(title)
 
     def add_book(self, book: [Book, dict]):
